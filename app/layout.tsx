@@ -1,12 +1,14 @@
+import { ThemeProvider } from "@/lib/themeProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ShadcnUI, learned from codeSTACKr",
-  description: "ShadcnUI, learned from codeSTACKr",
+  title: "ShadcnUI + next-themes, learned from codeSTACKr",
+  description: "ShadcnUI + next-themes, learned from codeSTACKr",
 };
 
 export default function RootLayout({
@@ -16,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <body className={inter.className}>
+          <Header />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

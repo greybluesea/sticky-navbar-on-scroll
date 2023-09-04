@@ -1,4 +1,4 @@
-## ShadcnUI, learned from codeSTACKr
+## ShadcnUI + next-themes, learned from codeSTACKr
 
 First, run the development server:
 
