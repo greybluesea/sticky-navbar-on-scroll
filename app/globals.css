@@ -63,3 +63,13 @@
     @apply h-0 transition-all duration-150 overflow-hidden pt-0 pb-0;
   }
 }
+
+.backdrop-filter {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-filter-blur {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}

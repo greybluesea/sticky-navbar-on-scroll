@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "./Container";
 import Link from "next/link";
 import { Moon, ShoppingCart, Sun } from "lucide-react";
@@ -28,11 +28,34 @@ export const routes = [
 
 const Header = (props: Props) => {
   const { theme, setTheme } = useTheme();
+  if (typeof document === "undefined") return;
+  const header = document.getElementById("header111");
+  console.log(header);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header?.classList.add("active");
+      } else {
+        header?.classList.remove("active");
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header?.classList.add(" active");
+        } else {
+          header?.classList.remove(" active");
+        }
+      });
+    };
+  }, []);
 
   return (
-    <div className="flex py-3 px-4 border-b">
+    <div className="fixed top-0 left-0 right-0 flex py-3 px-4 border-b active:py-0 active:h-0 z-[1] bg-background/50 backdrop-filter-blur">
       <Container>
-        <div className="px-6 lg:px-8 flex h-16 items-center justify-between w-full">
+        <div className="px-6 lg:px-8 flex h-12 sm:h-14 md:h-16 items-center justify-between w-full">
           <div className="flex space-x-2">
             <MenuButton />
             <Link href="/">

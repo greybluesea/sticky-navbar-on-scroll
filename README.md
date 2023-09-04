@@ -1,13 +1,3 @@
 ## ShadcnUI + next-themes, learned from codeSTACKr
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Youtube: [https://www.youtube.com/watch?v=s7KqPe_inLs](https://www.youtube.com/watch?v=s7KqPe_inLs)

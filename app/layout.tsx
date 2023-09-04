@@ -20,7 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <body className={inter.className + " min-h-screen"}>
+        <body
+          className={
+            inter.className +
+            " min-h-screen pt-[80px] sm:pt-[90px] md:pt-[100px]"
+          }
+        >
           <Header />
           {children}
           <Footer />
