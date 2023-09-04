@@ -28,7 +28,7 @@ export const routes = [
 
 const Header = (props: Props) => {
   const { theme, setTheme } = useTheme();
-  if (typeof document === "undefined") return;
+  /* if (typeof document === "undefined") return;
   const header = document.getElementById("header111");
   console.log(header);
 
@@ -50,7 +50,7 @@ const Header = (props: Props) => {
         }
       });
     };
-  }, []);
+  }, []); */
 
   return (
     <div className="fixed top-0 left-0 right-0 flex py-3 px-4 border-b active:py-0 active:h-0 z-[1] bg-background/50 backdrop-filter-blur">
