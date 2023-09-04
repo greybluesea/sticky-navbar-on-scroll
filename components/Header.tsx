@@ -7,10 +7,11 @@ import { Moon, ShoppingCart, Sun } from "lucide-react";
 import { Button } from "./ui/button";
 import ProfileButton from "./ProfileButton";
 import { useTheme } from "next-themes";
+import MenuButton from "./MenuButton";
 
 type Props = {};
 
-const routes = [
+export const routes = [
   {
     href: "/",
     label: "Products",
@@ -32,9 +33,12 @@ const Header = (props: Props) => {
     <div className="flex py-3 px-4 border-b">
       <Container>
         <div className="px-6 lg:px-8 flex h-16 items-center justify-between w-full">
-          <Link href="/">
-            <h1 className="text-xl font-bold">E-STORE</h1>
-          </Link>
+          <div className="flex space-x-2">
+            <MenuButton />
+            <Link href="/">
+              <h1 className="text-xl font-bold">E-STORE</h1>
+            </Link>
+          </div>
           <nav className=" flex items-center  space-x-4  md:space-x-8 lg:space-x-10 text-lg">
             {routes.map((route) => (
               <Link
@@ -56,8 +60,8 @@ const Header = (props: Props) => {
               className=" rounded-full"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              <Sun className="h-6 w-6  block transition-all  dark:hidden" />
-              <Moon className="h-6 w-6  hidden transition-all  dark:block" />
+              <Sun className="h-6 w-6 hidden dark:block   transition-all  " />
+              <Moon className="h-6 w-6 block dark:hidden transition-all " />
             </Button>
             <ProfileButton />
           </nav>
