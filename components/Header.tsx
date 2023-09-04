@@ -56,8 +56,8 @@ const Header = (props: Props) => {
               className=" rounded-full"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              <Sun className="h-6 w-6 rotate-0 block transition-all dark:-rotate-90 dark:hidden" />
-              <Moon className="h-6 w-6 rotate-90 hidden transition-all dark:rotate-0 dark:block" />
+              <Sun className="h-6 w-6  block transition-all  dark:hidden" />
+              <Moon className="h-6 w-6  hidden transition-all  dark:block" />
             </Button>
             <ProfileButton />
           </nav>
