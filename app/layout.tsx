@@ -11,8 +11,9 @@ const Header = dynamic(() => import("@/components/Header"), { ssr: false }); */
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ShadcnUI + next-themes, learned from codeSTACKr",
-  description: "ShadcnUI + next-themes, learned from codeSTACKr",
+  title: "sticky Navbar on scroll + shadcn ",
+  description:
+    "sticky Navbar on scroll(my original, using useState + useEffect), shadcn + next-themes(learned from codeSTACKr), frosty header (learned from Saraev Media)",
 };
 
 export default function RootLayout({
