@@ -60,17 +60,12 @@ const Header = (props: Props) => {
 
   useEffect(() => {
     const showHeaderOnScrollUp = () => {
-      // const previousY = yValue;
-      //console.log(window.scrollY);
-      /* setYValue(window.scrollY); */
-      //   console.log(window.scrollY);
       if (yValue >= window.scrollY) {
         setToHide(false);
       } else {
         setToHide(true);
       }
       setYValue(window.scrollY);
-      //  console.log(yValue);
     };
 
     window.addEventListener("scroll", showHeaderOnScrollUp);
