@@ -1,6 +1,6 @@
-## sticky Navbar on scroll + shadcn
+## sticky Navbar hide/show on scroll + shadcn
 
-- sticky Navbar on scroll (my original, using useState + useEffect)
+- sticky Navbar hide/show on scroll (my original, using useState + useEffect)
 - shadcn + next-themes (learned from codeSTACKr)
 - frosty header (learned from Saraev Media)
 - powered by greybluesea
